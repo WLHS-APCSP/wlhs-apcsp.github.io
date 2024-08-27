@@ -1,0 +1,148 @@
+/*custom global variables*/
+:root{
+    --western-bluebird-two:#2c5fca;
+    --western-bluebird: rgba(44, 95, 202, 0.5);
+    --tundra-swan: #e6d2b9;
+    --coot: #000106;
+    --light-blue: #C8D4E3;
+    --dark-blue: #a5b9e2;
+    --dark-blue-light:rgba(168,185,226,.95);
+    --main-bg-color: rgba(202, 151, 44, 0.2);
+}
+
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*global styles*/
+
+h1{
+    font-size: 140%;
+}
+h2{
+    font-size: 120%;
+}
+h3{
+    font-size: 112.5%;
+}
+
+a{
+    color:var(--western-bluebird)
+}
+
+body{
+    background:var(--main-bg-color);
+}
+
+main{
+    width:75%;
+    margin: 0 auto;
+}
+
+
+a:hover{
+    color:blue;
+}
+
+.main-navigation{
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    margin:2em;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    background-color: var(--western-bluebird);
+    font-size:80%;
+
+    li{
+        display:block;
+        list-style-type:none;
+        text-transform:uppercase;
+    }
+
+    li a{
+        display:flex;
+        /*text-align:center;*/
+        text-decoration:none;
+        color:#000;
+        padding:1rem;
+    }
+
+    li a:hover{
+        background:#777;
+    }
+}
+
+.menu-item-has-children > a:after{
+    font-family:'Material Icons';
+    content: '\e5c5';
+    padding:1px;
+}
+
+nav ul ul {
+    display: none;
+}
+
+nav ul li:hover > ul {
+    display:block;
+    color:#fff;
+    padding-left:2rem;
+}
+
+@media (min-width: 800px) {
+
+    .menu{
+        flex-direction:row;
+        justify-content:space-between;
+        font-size:100%;
+    }
+
+    nav ul ul {
+        display: none;
+        position:absolute;
+    }
+
+    nav ul li:hover > ul {
+        padding-left:0;
+        background:#777;
+    }
+
+    nav ul li:hover > ul a{
+        color:#fff;
+    }
+
+    .sub-menu{
+        li{
+            display:flex;
+            padding-right:2em;
+        }
+
+        li:hover, li a:hover{
+            background:#ddd;
+            color:#777;
+        }
+    }
+
+    nav ul ul ul{
+        margin:0 0 0 100%;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    }
+
+    .menu-item-has-children .menu-item-has-children > a:after{
+        font-family:'Material Icons';
+        content: '\e5c5';
+        padding:1px;
+        transform: rotate(-90deg);
+    }
+
+}
