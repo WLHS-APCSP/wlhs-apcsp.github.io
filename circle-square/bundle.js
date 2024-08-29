@@ -5485,15 +5485,15 @@
             if ("object" == typeof window) return window
         }
     }(), i.o = (t, e) => Object.prototype.hasOwnProperty.call(t, e);
-    var r = i(5778), a = i.n(r), n = new (a().Stage)({container: "container", width: 500, height: 500}),
+    var r = i(5778), a = i.n(r), n = new (a().Stage)({container: "container", width: 800, height: 800}),
         s = new (a().Layer);
     n.add(s), window.addCircle = function () {
-        var t = new (a().Circle)({x: 50, y: 50, radius: 25, fill: "red", draggable: !0});
+        var t = new (a().Circle)({x: 50, y: 50, radius: 25, fill: "#e06666", draggable: !0});
         t.on("contextmenu", (function (e) {
             e.evt.preventDefault(), t.destroy(), s.draw()
         })), s.add(t), s.draw()
     }, window.addSquare = function () {
-        var t = new (a().Rect)({x: 50, y: 50, width: 50, height: 50, fill: "blue", draggable: !0});
+        var t = new (a().Rect)({x: 50, y: 50, width: 50, height: 50, fill: "#6d9eeb", draggable: !0});
         t.on("contextmenu", (function (e) {
             e.evt.preventDefault(), t.destroy(), s.draw()
         })), s.add(t), s.draw()
